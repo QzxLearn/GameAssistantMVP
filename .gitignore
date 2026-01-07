@@ -1,0 +1,26 @@
+# GameAssistantMVP/.gitignore
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.cache
+*.pdb
+*.mdb
+*.dll
+*.exe
+*.log
+
+# Tesseract temp files (if any)
+*.tmp
+
+# Ignore all in tessdata except traineddata
+tessdata/*
+!tessdata/eng.traineddata
+!tessdata/configs/
+
+# macOS
+.DS_Store
