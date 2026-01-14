@@ -52,7 +52,7 @@ public partial class MainWindow : System.Windows.Window
 
             // 4. OCR
             var ocrService = new OcrService();
-            var text = OcrService.RecognizeText(processedMat);
+            var text = ocrService.RecognizeText(processedMat);
             File.WriteAllText("ocr_result.txt", text.Trim());
 
             // 5. 显示结果
