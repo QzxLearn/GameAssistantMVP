@@ -1,68 +1,114 @@
-ï»¿using GameAssistantMVP.Services;
-using GameAssistantMVP.Views;
+using GameAssistant.Core.Enums;
+using GameAssistant.Core.Interfaces;
+using GameAssistant.Core.Models;
+using GameAssistant.Core.Parsers;
+using GameAssistant.Infrastructure.Ocr;
+using GameAssistant.Infrastructure.Storage.Data;
+using GameAssistant.WpfClient.Views;
+using Microsoft.EntityFrameworkCore;
 using OpenCvSharp;
 using System.IO;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
-namespace GameAssistantMVP;
+namespace GameAssistant.WpfClient;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : System.Windows.Window
 {
-    public MainWindow()
+    private readonly IOcrService _ocrService;
+    private readonly AppDbContext _dbContext;
+    // ÐÂÔö£ºÔÊÐíÍâ²¿´¥·¢²¶»ñµÄÎ¯ÍÐ
+    public Action? OnCaptureRequested { get; set; }
+    public MainWindow(IOcrService ocrService, AppDbContext dbContext)
     {
         InitializeComponent();
+        _ocrService = ocrService;
+        _dbContext = dbContext;
+        // ³õÊ¼»¯Ê±×¢²á×ÔÉí²¶»ñÂß¼­
+        OnCaptureRequested = async () => await PerformCaptureAsync();
     }
 
-    private void CaptureButton_Click(object sender, RoutedEventArgs e)
+    private async Task PerformCaptureAsync()
     {
+        // ×¢Òâ£º´Ë·½·¨¿ÉÄÜ´Ó·Ç UI Ïß³Ìµ÷ÓÃ£¨ÈÈ¼ü´¥·¢£©£¬ÐèÈ·±£Ïß³Ì°²È«
+        if (!Dispatcher.CheckAccess())
+        {
+            await Dispatcher.Invoke(PerformCaptureAsync);
+            return;
+        }
         try
         {
-            // 1. æ˜¾ç¤ºåŒºåŸŸé€‰æ‹©çª—å£
+            // 1. ÇøÓòÑ¡Ôñ£¨±£³ÖÄ£Ì¬¶Ô»°¿ò£©
             var selectionWin = new ScreenSelectionWindow();
             bool? result = selectionWin.ShowDialog();
-
             if (!result.HasValue || !selectionWin.SelectedRegion.HasValue)
             {
-                ResultBox.Text = "âŒ æœªé€‰æ‹©æœ‰æ•ˆåŒºåŸŸ";
+                ResultBox.Dispatcher.Invoke(() => ResultBox.Text = "? Î´Ñ¡ÔñÓÐÐ§ÇøÓò");
                 return;
             }
-
             var region = selectionWin.SelectedRegion.Value;
 
-            // 2. æˆªå›¾ï¼ˆæŒ‡å®šåŒºåŸŸï¼‰
+            // 2. ½ØÍ¼
             var captureService = new ScreenCaptureService();
             using var originalMat = captureService.CaptureRegion(region.X, region.Y, region.Width, region.Height);
             Cv2.ImWrite("screenshot_original.png", originalMat);
 
-            // 3. é¢„å¤„ç†
-            using var processedMat = ImagePreprocessor.Preprocess(originalMat);
-            Cv2.ImWrite("screenshot_processed.png", processedMat);
+            // 3. API ´¦ÀíOCR
+            byte[] imageBytes = originalMat.ToBytes(".png");
+            // ¹Ø¼ü£ºOCR ÊÇ CPU ÃÜ¼¯ÐÍ£¬Ðè·Åµ½ºóÌ¨Ïß³Ì±ÜÃâ UI ¿¨¶Ù
+            var text = await Task.Run(() => _ocrService.RecognizeFromBytes(imageBytes, OcrMode.CardText));
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                ResultBox.Dispatcher.Invoke(() => ResultBox.Text = "?? Î´Ê¶±ðµ½ÎÄ×Ö");
+                return;
+            }
 
-            // 4. OCR
-            var ocrService = new OcrService();
-            var text = ocrService.RecognizeText(processedMat);
-            File.WriteAllText("ocr_result.txt", text.Trim());
+            // 5. ½âÎöÎª½á¹¹»¯×´Ì¬
+            var parser = new GenericGameStateParser();
+            var gameState = parser.Parse(text);
 
-            // 5. æ˜¾ç¤ºç»“æžœ
-            ResultBox.Text = string.IsNullOrWhiteSpace(text)
-                ? "âš ï¸ æœªè¯†åˆ«åˆ°æ–‡å­—"
-                : text.Trim();
+            // 6. ÐòÁÐ»¯²¢´æÈëÊý¾Ý¿â
+            var dbPath = System.IO.Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "game_memory.db"
+            );
+            var record = new GameSessionRecord
+            {
+                GameName = gameState.GameName,
+                GameStateJson = System.Text.Json.JsonSerializer.Serialize(gameState),
+                Timestamp = DateTime.UtcNow
+            };
+            _dbContext.GameSessions.Add(record);
+            await _dbContext.SaveChangesAsync();
+
+            // 7. ÏÔÊ¾½á¹û
+            // ¹Ø¼ü£ºËùÓÐ UI ²Ù×÷Ðè Dispatcher.Invoke£¨Òò¿ÉÄÜ´ÓÍÐÅÌÏß³Ì´¥·¢£©
+            ResultBox.Dispatcher.Invoke(() => ResultBox.Text = $"? Ê¶±ð³É¹¦: {text}");
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
-            ResultBox.Text = "âŒ é”™è¯¯: " + ex.Message;
+            ResultBox.Dispatcher.Invoke(() =>
+                ResultBox.Text = $"? ´íÎó: {ex.Message}");
         }
+
+    }
+    private async void CaptureButton_Click(object sender, RoutedEventArgs e)
+    {
+        await PerformCaptureAsync();
+    }
+
+    private void Window_StateChanged(object sender, EventArgs e)
+    {
+        if (WindowState == WindowState.Minimized)
+        {
+            Hide(); // ×îÐ¡»¯Ê±Òþ²Ø´°¿Ú£¨±£ÁôÍÐÅÌ£©
+        }
+    }
+
+    private void MinimizeToTrayButton_Click(object sender, RoutedEventArgs e)
+    {
+        WindowState = WindowState.Minimized;
     }
 }

@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="Core/GameAssistant.Core.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/GameAssistant.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/" />
+  <Folder Name="/Presentation/WebApi/">
+    <Project Path="Presentation/WebApi/GameAssistant.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/Presentation/WpfClient/">
+    <Project Path="Presentation/WpfClient/GameAssistant.WpfClient.csproj" />
+  </Folder>
+</Solution>

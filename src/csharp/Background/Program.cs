@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace GameAssistant.Worker
@@ -15,3 +15,4 @@ namespace GameAssistant.Worker
         }
     }
 }
+

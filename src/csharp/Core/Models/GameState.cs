@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 namespace GameAssistant.Core.Models
 {
     /// <summary>
-    /// æ‰€æœ‰æ¸¸æˆçŠ¶æ€çš„åŸºç±»
+    /// ËùÓĞÓÎÏ·×´Ì¬µÄ»ùÀà
     /// </summary>
     public abstract class GameState
     {
@@ -17,15 +17,16 @@ namespace GameAssistant.Core.Models
         public DateTime Timestamp { get; init; } = DateTime.UtcNow;
 
         /// <summary>
-        /// å¯é€‰ï¼šåŸå§‹ OCR æ–‡æœ¬ï¼ˆç”¨äºè°ƒè¯•/å›æ”¾ï¼‰
+        /// ¿ÉÑ¡£ºÔ­Ê¼ OCR ÎÄ±¾£¨ÓÃÓÚµ÷ÊÔ/»Ø·Å£©
         /// </summary>
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public string? RawOcrText { get; set; }
     }
 
-    // ç¤ºä¾‹ï¼šå…·ä½“æ¸¸æˆçŠ¶æ€ï¼ˆç”±å„ Adapter å®ç°ï¼‰
+    // Ê¾Àı£º¾ßÌåÓÎÏ·×´Ì¬£¨ÓÉ¸÷ Adapter ÊµÏÖ£©
     public class GenericGameState : GameState
     {
         public string RecognizedText { get; set; } = string.Empty;
     }
 }
+

@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -7,20 +7,21 @@ using GameAssistant.Core.Models;
 namespace GameAssistant.Core.Interfaces
 {
     /// <summary>
-    /// å°† OCR è¯†åˆ«å‡ºçš„åŸå§‹æ–‡æœ¬è§£æä¸ºç»“æ„åŒ–æ¸¸æˆçŠ¶æ€
+    /// ½« OCR Ê¶±ğ³öµÄÔ­Ê¼ÎÄ±¾½âÎöÎª½á¹¹»¯ÓÎÏ·×´Ì¬
     /// </summary>
     public interface IGameStateParser
     {
         /// <summary>
-        /// æ¸¸æˆåç§°æ ‡è¯†ï¼ˆå¦‚ "Diablo2", "StardewValley"ï¼‰
+        /// ÓÎÏ·Ãû³Æ±êÊ¶£¨Èç "Diablo2", "StardewValley"£©
         /// </summary>
         string GameName { get; }
 
         /// <summary>
-        /// è§£æ OCR æ–‡æœ¬ä¸ºæ¸¸æˆçŠ¶æ€
+        /// ½âÎö OCR ÎÄ±¾ÎªÓÎÏ·×´Ì¬
         /// </summary>
-        /// <param name="ocrText">Tesseract è¯†åˆ«å‡ºçš„åŸå§‹æ–‡æœ¬</param>
-        /// <returns>ç»“æ„åŒ–çŠ¶æ€å¯¹è±¡</returns>
+        /// <param name="ocrText">Tesseract Ê¶±ğ³öµÄÔ­Ê¼ÎÄ±¾</param>
+        /// <returns>½á¹¹»¯×´Ì¬¶ÔÏó</returns>
         GameState Parse(string ocrText);
     }
 }
+

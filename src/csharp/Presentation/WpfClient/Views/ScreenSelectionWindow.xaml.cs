@@ -1,4 +1,4 @@
-锘縰sing System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -10,10 +10,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace GameAssistantMVP.Views
+namespace GameAssistant.WpfClient.Views
 {
     /// <summary>
-    /// ScreenSelectionWindow.xaml 鐨勪氦浜掗�昏緫
+    /// ScreenSelectionWindow.xaml 的交互逻辑
     /// </summary>
     public partial class ScreenSelectionWindow : Window
     {
@@ -76,12 +76,14 @@ namespace GameAssistantMVP.Views
             {
                 if (SelectionRectangle.Width >= 10 && SelectionRectangle.Height >= 10)
                 {
-                    SelectedRegion = new Rect(
+                    var logicalRect = new Rect(
                         Canvas.GetLeft(SelectionRectangle),
                         Canvas.GetTop(SelectionRectangle),
                         SelectionRectangle.Width,
                         SelectionRectangle.Height
                     );
+                    var physicalRect = ConvertLogicalRectToPhysical(logicalRect);
+                    SelectedRegion = physicalRect;
                     DialogResult = true;
                 }
                 else
@@ -91,5 +93,23 @@ namespace GameAssistantMVP.Views
                 Close();
             }
         }
+        private Rect ConvertLogicalRectToPhysical(Rect logicalRect)
+        {
+            var source = PresentationSource.FromVisual(this);
+            if (source?.CompositionTarget == null)
+            {
+                // 无法获取变换时回退到逻辑坐标（不推荐，仅作安全兜底）
+                return logicalRect;
+            }
+
+            // 获取从设备（物理像素）到逻辑坐标的变换
+            var transformToDevice = source.CompositionTarget.TransformToDevice;
+
+            var topLeft = transformToDevice.Transform(new Point(logicalRect.Left, logicalRect.Top));
+            var bottomRight = transformToDevice.Transform(new Point(logicalRect.Right, logicalRect.Bottom));
+
+            return new Rect(topLeft, bottomRight);
+        }
     }
 }
+

@@ -1,15 +1,17 @@
-using GameAssistant.Api.Services;
+using GameAssistant.Core.Interfaces;
+using GameAssistant.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GameAssistant.Api.Controllers
+namespace GameAssistant.Presentation.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class OcrController : ControllerBase
     {
-        private readonly OcrService _ocrService;
+        private readonly IOcrService _ocrService; // �?接口类型
 
-        public OcrController(OcrService ocrService)
+        // 依赖注入（由 Program.cs 注册�?
+        public OcrController(IOcrService ocrService)
         {
             _ocrService = ocrService;
         }
@@ -23,7 +25,7 @@ namespace GameAssistant.Api.Controllers
             try
             {
                 byte[] imageBytes = Convert.FromBase64String(request.Base64Image);
-                string text = _ocrService.RecognizeFromBytes(imageBytes);
+                string text = _ocrService.RecognizeFromBytes(imageBytes); // �?调用统一服务
                 return Ok(new { text });
             }
             catch (Exception ex)
@@ -32,9 +34,10 @@ namespace GameAssistant.Api.Controllers
             }
         }
     }
-
     public class OcrRequest
     {
         public string Base64Image { get; set; } = string.Empty;
+        public ImagePreprocessOptions? Preprocess { get; set; }
     }
 }
+

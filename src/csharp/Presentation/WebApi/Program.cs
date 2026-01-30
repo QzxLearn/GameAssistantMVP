@@ -1,7 +1,7 @@
+using GameAssistant.Core.Interfaces;
+using GameAssistant.Infrastructure.Ocr;
 
-using GameAssistant.Api.Services;
-
-namespace GameAssistant.Api
+namespace GameAssistant.Presentation.WebApi
 {
     public class Program
     {
@@ -15,8 +15,12 @@ namespace GameAssistant.Api
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
             builder.Services.AddOpenApi();
             // 注册Ocr服务
-            builder.Services.AddSingleton<OcrService>();
-
+            builder.Services.AddSingleton<IOcrService, TesseractOcrService>(
+                sp => {
+                    var config = sp.GetRequiredService<IConfiguration>();
+                    var path = config["TessDataPath"] ?? "tessdata";
+                    return new TesseractOcrService(path);
+                });
             // 允许WPF调用（开发阶段）
             builder.Services.AddCors(options =>
             {
@@ -43,3 +47,4 @@ namespace GameAssistant.Api
         }
     }
 }
+
