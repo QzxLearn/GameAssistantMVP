@@ -1,3 +1,6 @@
+# ========================
+# C# 项目排除
+# ========================
 # GameAssistantMVP/.gitignore
 bin/
 obj/
@@ -13,6 +16,40 @@ obj/
 *.dll
 *.exe
 *.log
+
+# NuGet
+packages/
+*.nupkg
+project.lock.json
+Directory.Build.props
+
+# ========================
+# Python 训练工具排除
+# ========================
+# 虚拟环境
+tools/**/venv/
+tools/**/__pycache__/
+tools/**/.python-version
+
+# 训练数据（真实数据不入仓）
+data/raw/
+data/labeled/
+!data/raw/.gitkeep
+!data/labeled/.gitkeep
+
+# 模型文件
+data/models/
+!data/models/.gitkeep
+
+# Jupyter
+tools/**/.ipynb_checkpoints/
+*.ipynb
+
+# ========================
+# WSL 专属排除
+# ========================
+# WSL会在/mnt/c/...下生成的锁文件
+.wsllock
 
 # Tesseract temp files (if any)
 *.tmp
