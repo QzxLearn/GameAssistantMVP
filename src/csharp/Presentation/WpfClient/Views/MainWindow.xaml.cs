@@ -1,7 +1,7 @@
 using GameAssistant.Core.Enums;
 using GameAssistant.Core.Interfaces;
 using GameAssistant.Core.Models;
-using GameAssistant.Core.Parsers;
+using GameAssistant.Infrastructure.Capture;
 using GameAssistant.Infrastructure.Ocr;
 using GameAssistant.Infrastructure.Storage.Data;
 using GameAssistant.WpfClient.Views;
