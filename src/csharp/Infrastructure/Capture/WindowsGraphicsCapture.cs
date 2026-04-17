@@ -1,34 +1,54 @@
-// GameAssistant.WpfClient/ScreenCaptureService.cs
+using GameAssistant.Core.Interfaces;
 using GameAssistant.Core.Models;
-using GameAssistant.WpfClient.Services;
+using Microsoft.Extensions.Logging;
 using OpenCvSharp;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace GameAssistant.Infrastructure.Capture;
 
-public class ScreenCaptureService : IScreenCaptureService
+/// <summary>
+/// Âü∫‰∫é Win32 BitBlt ÁöÑÂ±èÂπïÊçïËé∑ÂÆûÁé∞ÔºàÂÖºÂÆπ WindowsÔºâ
+/// </summary>
+public class WindowsGraphicsCaptureService : IScreenCaptureService
 {
+    private readonly ILogger<WindowsGraphicsCaptureService>? _logger;
+
+    public WindowsGraphicsCaptureService(ILogger<WindowsGraphicsCaptureService>? logger = null)
+    {
+        _logger = logger;
+    }
     [DllImport("user32.dll")]
     static extern IntPtr GetDC(IntPtr hwnd);
+
     [DllImport("user32.dll")]
     static extern int ReleaseDC(IntPtr hwnd, IntPtr hdc);
+
     [DllImport("gdi32.dll")]
     static extern IntPtr CreateCompatibleDC(IntPtr hdc);
+
     [DllImport("gdi32.dll")]
     static extern IntPtr CreateCompatibleBitmap(IntPtr hdc, int nWidth, int nHeight);
+
     [DllImport("gdi32.dll")]
     static extern IntPtr SelectObject(IntPtr hdc, IntPtr hgdiobj);
+
     [DllImport("gdi32.dll")]
     static extern bool BitBlt(IntPtr hdcDest, int nXDest, int nYDest, int nWidth, int nHeight,
                               IntPtr hdcSrc, int nXSrc, int nYSrc, int dwRop);
+
     [DllImport("gdi32.dll")]
     static extern bool DeleteDC(IntPtr hdc);
+
     [DllImport("gdi32.dll")]
     static extern bool DeleteObject(IntPtr hObject);
+
     [DllImport("user32.dll")]
     static extern int GetSystemMetrics(int nIndex);
 
@@ -36,7 +56,6 @@ public class ScreenCaptureService : IScreenCaptureService
     const int SM_CXSCREEN = 0;
     const int SM_CYSCREEN = 1;
 
-    // »´∆¡ΩÿÕº
     public Mat CaptureFullscreen()
     {
         int width = GetSystemMetrics(SM_CXSCREEN);
@@ -49,10 +68,9 @@ public class ScreenCaptureService : IScreenCaptureService
         return CaptureRegion(region.X, region.Y, region.Width, region.Height);
     }
 
-    // ÷∏∂®«¯”ÚΩÿÕº£®x, y, width, height æ˘Œ™∆¡ƒª◊¯±Í£©
+    [MethodImpl(MethodImplOptions.NoInlining)]
     public Mat CaptureRegion(double x, double y, double width, double height)
     {
-        // ∞≤»´±ﬂΩÁºÏ≤È
         if (width <= 0 || height <= 0)
             throw new ArgumentException("Width and height must be positive.");
 
@@ -93,5 +111,23 @@ public class ScreenCaptureService : IScreenCaptureService
                 File.Delete(tempFile);
         }
     }
-}
 
+    public Task<Mat?> CaptureAsync(CancellationToken ct = default)
+    {
+        return Task.Run(() =>
+        {
+            try
+            {
+                var mat = CaptureFullscreen();
+                return (Mat?)mat;
+            }
+            catch (Exception ex)
+            {
+                var msg = ex is TypeInitializationException tie && tie.InnerException != null
+                    ? $"TypeInit: {tie.InnerException.Message}" : ex.Message;
+                _logger?.LogWarning("Â±èÂπïÊçïËé∑Â§±Ë¥•: {Message}", msg);
+                return null;
+            }
+        }, ct);
+    }
+}

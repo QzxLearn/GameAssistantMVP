@@ -1,0 +1,4 @@
+shared_data_root: "/mnt/c/Users/qzx/AppData/Local/GameAssistant/data"
+raw_dir: "/mnt/c/Users/qzx/AppData/Local/GameAssistant/data/raw"
+labeled_dir: "/mnt/c/Users/qzx/AppData/Local/GameAssistant/data/labeled"
+models_dir: "/mnt/c/Users/qzx/AppData/Local/GameAssistant/data/models"

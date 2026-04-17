@@ -1,27 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
 using GameAssistant.Core.Models;
 
-namespace GameAssistant.Core.Interfaces
+namespace GameAssistant.Core.Interfaces;
+
+/// <summary>
+/// å°† OCR è¯†åˆ«å‡ºçš„åŸå§‹æ–‡æœ¬è§£æä¸ºç»“æ„åŒ–æ¸¸æˆçŠ¶æ€
+/// </summary>
+public interface IGameStateParser
 {
     /// <summary>
-    /// ½« OCR Ê¶±ğ³öµÄÔ­Ê¼ÎÄ±¾½âÎöÎª½á¹¹»¯ÓÎÏ·×´Ì¬
+    /// æ¸¸æˆåç§°æ ‡è¯†ï¼Œå¦‚ "SlayTheSpire", "Diablo2"
     /// </summary>
-    public interface IGameStateParser
-    {
-        /// <summary>
-        /// ÓÎÏ·Ãû³Æ±êÊ¶£¨Èç "Diablo2", "StardewValley"£©
-        /// </summary>
-        string GameName { get; }
+    string GameName { get; }
 
-        /// <summary>
-        /// ½âÎö OCR ÎÄ±¾ÎªÓÎÏ·×´Ì¬
-        /// </summary>
-        /// <param name="ocrText">Tesseract Ê¶±ğ³öµÄÔ­Ê¼ÎÄ±¾</param>
-        /// <returns>½á¹¹»¯×´Ì¬¶ÔÏó</returns>
-        GameState Parse(string ocrText);
-    }
+    /// <summary>
+    /// å°† OCR æ–‡æœ¬è§£æä¸ºç»“æ„åŒ–çŠ¶æ€
+    /// </summary>
+    /// <param name="ocrText">Tesseract è¯†åˆ«çš„åŸå§‹æ–‡æœ¬</param>
+    /// <returns>ç»“æ„åŒ–çŠ¶æ€å¯¹è±¡</returns>
+    GameState Parse(string ocrText);
+
+    /// <summary>
+    /// å°† OCR æ–‡æœ¬è§£æä¸ºç‰¹å®šæ¸¸æˆçš„å®Œæ•´çŠ¶æ€ï¼ˆæ‰©å±•æ–¹æ³•ï¼‰
+    /// </summary>
+    T Parse<T>(string ocrText) where T : GameState;
 }
-

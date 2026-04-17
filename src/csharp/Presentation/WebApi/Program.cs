@@ -21,6 +21,7 @@ namespace GameAssistant.Presentation.WebApi
                     var path = config["TessDataPath"] ?? "tessdata";
                     return new TesseractOcrService(path);
                 });
+            builder.Services.AddSingleton<IGameStateParser, GameStateParser>();
             // 允许WPF调用（开发阶段）
             builder.Services.AddCors(options =>
             {

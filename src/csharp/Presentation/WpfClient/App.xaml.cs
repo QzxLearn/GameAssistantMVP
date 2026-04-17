@@ -13,6 +13,7 @@ namespace GameAssistant.WpfClient;
 /// </summary>
 public partial class App : Application
 {
+    public static IServiceProvider Services { get; private set; } = null!;
     private IServiceProvider _serviceProvider;
     private TrayIconHelper? _trayHelper;
     private MainWindow? _mainWindow;
@@ -32,15 +33,24 @@ public partial class App : Application
             new AppDbContext(AppConstants.DbPath));
 
         _serviceProvider = services.BuildServiceProvider();
+
+        Services = _serviceProvider;
+
+        // 确保目录存在
+        AppConstants.EnsureSharedDirectories();
+
+        // 数据库初始化
+        var dbContext = _serviceProvider.GetRequiredService<AppDbContext>();
+        dbContext.Database.EnsureCreated();
         // 1. 创建主窗口但不立即显示（启动到托盘）
         var ocrService = _serviceProvider.GetRequiredService<IOcrService>();
-        var dbContext = _serviceProvider.GetRequiredService<AppDbContext>();
         _mainWindow = new MainWindow(ocrService, dbContext); // ? 正确传参
 
         // 2. 创建托盘助手（传递捕获委托）
         _trayHelper = new TrayIconHelper(
             _mainWindow,
-            _mainWindow.OnCaptureRequested // 方法组转换为 Action
+            _mainWindow.OnCaptureRequested, // 方法组转换为 Action
+            _serviceProvider
         );
         // 4. 应用启动后最小化到托盘
         _mainWindow.Loaded += (s, args) =>

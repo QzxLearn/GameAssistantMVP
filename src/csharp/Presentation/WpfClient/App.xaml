@@ -1,7 +1,8 @@
 ﻿<Application x:Class="GameAssistant.WpfClient.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:GameAssistant.WpfClient">
+             xmlns:local="clr-namespace:GameAssistant.WpfClient"
+             xmlns:helpers="clr-namespace:GameAssistant.WpfClient.Helpers">
     <!-- 正确做法：将托盘图标定义为资源 -->
     <Application.Resources>
         <DrawingImage x:Key="TrayIcon">
@@ -13,5 +14,7 @@
                 </GeometryDrawing>
             </DrawingImage.Drawing>
         </DrawingImage>
+        <helpers:IsNullOrEmptyConverter x:Key="IsNullOrEmptyConverter"/>
+        <helpers:EmptyToDefaultConverter x:Key="EmptyToDefaultConverter"/>
     </Application.Resources>
 </Application>

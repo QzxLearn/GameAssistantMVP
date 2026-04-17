@@ -1,35 +1,30 @@
 using GameAssistant.Core.Models;
 using OpenCvSharp;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace GameAssistant.WpfClient.Services
+namespace GameAssistant.Core.Interfaces;
+
+/// <summary>
+/// å±å¹•æ•è·æœåŠ¡æ¥å£
+/// </summary>
+public interface IScreenCaptureService
 {
-    public interface IScreenCaptureService
-    {
-        /// <summary>
-        /// ½ØÈ¡È«ÆÁ
-        /// </summary>
-        /// <returns></returns>
-        Mat CaptureFullscreen();
-        
-        /// <summary>
-        /// ½ØÈ¡Ö¸¶¨ÇøÓò
-        /// </summary>
-        /// <param name="region"></param>
-        /// <returns></returns>
-        Mat CaptureRegion(CaptureRegion region);
+    /// <summary>
+    /// æˆªå–å…¨å±
+    /// </summary>
+    Mat CaptureFullscreen();
 
-        /// <summary>
-        /// ½ØÈ¡Ö¸¶¨×ø±êºÍ³ß´çµÄÇøÓò£¨¼æÈİ¾Éµ÷ÓÃ·½Ê½£©
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="width"></param>
-        /// <param name="height"></param>
-        /// <returns></returns>
-        Mat CaptureRegion(double x, double y, double width, double height);
-    }
+    /// <summary>
+    /// æˆªå–æŒ‡å®šåŒºåŸŸï¼ˆç›¸å¯¹æ¯”ä¾‹ 0.0-1.0ï¼‰
+    /// </summary>
+    Mat CaptureRegion(CaptureRegion region);
+
+    /// <summary>
+    /// æˆªå–æŒ‡å®šåŒºåŸŸï¼ˆç»å¯¹åƒç´ åæ ‡ï¼‰
+    /// </summary>
+    Mat CaptureRegion(double x, double y, double width, double height);
+
+    /// <summary>
+    /// æˆªå–æ¸¸æˆçª—å£ï¼ˆå¼‚æ­¥ï¼‰
+    /// </summary>
+    Task<Mat?> CaptureAsync(CancellationToken ct = default);
 }
-

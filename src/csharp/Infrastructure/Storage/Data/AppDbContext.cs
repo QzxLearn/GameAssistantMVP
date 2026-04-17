@@ -9,14 +9,14 @@ public class AppDbContext : DbContext
 
     private readonly string _dbPath;
 
-    // ÓÃÓÚÔËÐÐÊ±£¨Ö¸¶¨Êý¾Ý¿âÂ·¾¶£©
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½Â·ï¿½ï¿½ï¿½ï¿½
     public AppDbContext(string dbPath)
     {
         _dbPath = dbPath;
     }
 
-    // ÓÃÓÚ EF Éè¼ÆÊ±¹¤¾ß£¨±ØÐëÓÐÎÞ²Î¹¹Ôìº¯Êý»òÊ¹ÓÃ IDesignTimeDbContextFactory£©
-    protected AppDbContext() { }
+    // ï¿½ï¿½ï¿½ï¿½ EF ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ß£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ²Î¹ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ IDesignTimeDbContextFactoryï¿½ï¿½
+    protected AppDbContext() { _dbPath = "game_assistant.db"; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

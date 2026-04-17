@@ -1,0 +1,1742 @@
+[
+  {
+    "id": "akabeko",
+    "name": "Akabeko",
+    "rarity": "Uncommon",
+    "description": "At start of turn"
+  },
+  {
+    "id": "alchemical_coffer",
+    "name": "AlchemicalCoffer",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "amethyst_aubergine",
+    "name": "AmethystAubergine",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "anchor",
+    "name": "Anchor",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "arcane_scroll",
+    "name": "ArcaneScroll",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "archaic_tooth",
+    "name": "ArchaicTooth",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "art_of_war",
+    "name": "ArtOfWar",
+    "rarity": "Rare",
+    "description": "At end of turn"
+  },
+  {
+    "id": "astrolabe",
+    "name": "Astrolabe",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "bag_of_marbles",
+    "name": "BagOfMarbles",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "bag_of_preparation",
+    "name": "BagOfPreparation",
+    "rarity": "Common",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "beating_remnant",
+    "name": "BeatingRemnant",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "beautiful_bracelet",
+    "name": "BeautifulBracelet",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "bellows",
+    "name": "Bellows",
+    "rarity": "Uncommon",
+    "description": "At start of turn"
+  },
+  {
+    "id": "belt_buckle",
+    "name": "BeltBuckle",
+    "rarity": "Shop",
+    "description": "At end of combat"
+  },
+  {
+    "id": "big_hat",
+    "name": "BigHat",
+    "rarity": "Rare",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "big_mushroom",
+    "name": "BigMushroom",
+    "rarity": "Event",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "biiig_hug",
+    "name": "BiiigHug",
+    "rarity": "Ancient",
+    "description": "Add 4 cards"
+  },
+  {
+    "id": "bing_bong",
+    "name": "BingBong",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "black_blood",
+    "name": "BlackBlood",
+    "rarity": "Starter",
+    "description": "Heal 12 HP"
+  },
+  {
+    "id": "black_star",
+    "name": "BlackStar",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "blessed_antler",
+    "name": "BlessedAntler",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "blood_soaked_rose",
+    "name": "BloodSoakedRose",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "blood_vial",
+    "name": "BloodVial",
+    "rarity": "Common",
+    "description": "Heal 2 HP"
+  },
+  {
+    "id": "bone_flute",
+    "name": "BoneFlute",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "bone_tea",
+    "name": "BoneTea",
+    "rarity": "Event",
+    "description": "At start of turn"
+  },
+  {
+    "id": "book_of_five_rings",
+    "name": "BookOfFiveRings",
+    "rarity": "Common",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "book_repair_knife",
+    "name": "BookRepairKnife",
+    "rarity": "Uncommon",
+    "description": "Heal 3 HP"
+  },
+  {
+    "id": "bookmark",
+    "name": "Bookmark",
+    "rarity": "Rare",
+    "description": "At end of turn"
+  },
+  {
+    "id": "booming_conch",
+    "name": "BoomingConch",
+    "rarity": "Ancient",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "bound_phylactery",
+    "name": "BoundPhylactery",
+    "rarity": "Starter",
+    "description": null
+  },
+  {
+    "id": "bowler_hat",
+    "name": "BowlerHat",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "bread",
+    "name": "Bread",
+    "rarity": "Shop",
+    "description": "At start of turn"
+  },
+  {
+    "id": "brilliant_scarf",
+    "name": "BrilliantScarf",
+    "rarity": "Ancient",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "brimstone",
+    "name": "Brimstone",
+    "rarity": "Shop",
+    "description": "At start of turn"
+  },
+  {
+    "id": "bronze_scales",
+    "name": "BronzeScales",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "burning_blood",
+    "name": "BurningBlood",
+    "rarity": "Starter",
+    "description": "Heal 6 HP"
+  },
+  {
+    "id": "burning_sticks",
+    "name": "BurningSticks",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "byrdpip",
+    "name": "Byrdpip",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "calling_bell",
+    "name": "CallingBell",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "candelabra",
+    "name": "Candelabra",
+    "rarity": "Uncommon",
+    "description": "At start of turn"
+  },
+  {
+    "id": "captains_wheel",
+    "name": "CaptainsWheel",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "cauldron",
+    "name": "Cauldron",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "centennial_puzzle",
+    "name": "CentennialPuzzle",
+    "rarity": "Common",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "chandelier",
+    "name": "Chandelier",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "charons_ashes",
+    "name": "CharonsAshes",
+    "rarity": "Rare",
+    "description": "Deal 3 damage"
+  },
+  {
+    "id": "chemical_x",
+    "name": "ChemicalX",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "choices_paradox",
+    "name": "ChoicesParadox",
+    "rarity": "Ancient",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "chosen_cheese",
+    "name": "ChosenCheese",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "circlet",
+    "name": "Circlet",
+    "rarity": "None",
+    "description": null
+  },
+  {
+    "id": "claws",
+    "name": "Claws",
+    "rarity": "Ancient",
+    "description": "Add 6 cards"
+  },
+  {
+    "id": "cloak_clasp",
+    "name": "CloakClasp",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "cracked_core",
+    "name": "CrackedCore",
+    "rarity": "Starter",
+    "description": null
+  },
+  {
+    "id": "crossbow",
+    "name": "Crossbow",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "cursed_pearl",
+    "name": "CursedPearl",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "darkstone_periapt",
+    "name": "DarkstonePeriapt",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "data_disk",
+    "name": "DataDisk",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "daughter_of_the_wind",
+    "name": "DaughterOfTheWind",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "delicate_frond",
+    "name": "DelicateFrond",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "demon_tongue",
+    "name": "DemonTongue",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "deprecated_relic",
+    "name": "DeprecatedRelic",
+    "rarity": "None",
+    "description": null
+  },
+  {
+    "id": "diamond_diadem",
+    "name": "DiamondDiadem",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "dingy_rug",
+    "name": "DingyRug",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "distinguished_cape",
+    "name": "DistinguishedCape",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "divine_destiny",
+    "name": "DivineDestiny",
+    "rarity": "Starter",
+    "description": "At start of turn"
+  },
+  {
+    "id": "divine_right",
+    "name": "DivineRight",
+    "rarity": "Starter",
+    "description": null
+  },
+  {
+    "id": "dollys_mirror",
+    "name": "DollysMirror",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "dragon_fruit",
+    "name": "DragonFruit",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "dream_catcher",
+    "name": "DreamCatcher",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "driftwood",
+    "name": "Driftwood",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "dusty_tome",
+    "name": "DustyTome",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "ectoplasm",
+    "name": "Ectoplasm",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "electric_shrymp",
+    "name": "ElectricShrymp",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "ember_tea",
+    "name": "EmberTea",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "emotion_chip",
+    "name": "EmotionChip",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "empty_cage",
+    "name": "EmptyCage",
+    "rarity": "Ancient",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "eternal_feather",
+    "name": "EternalFeather",
+    "rarity": "Uncommon",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "fake_anchor",
+    "name": "FakeAnchor",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fake_blood_vial",
+    "name": "FakeBloodVial",
+    "rarity": "Event",
+    "description": "Heal 1 HP"
+  },
+  {
+    "id": "fake_happy_flower",
+    "name": "FakeHappyFlower",
+    "rarity": "Event",
+    "description": "At start of turn"
+  },
+  {
+    "id": "fake_lees_waffle",
+    "name": "FakeLeesWaffle",
+    "rarity": "Event",
+    "description": "Heal 10 HP"
+  },
+  {
+    "id": "fake_mango",
+    "name": "FakeMango",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fake_merchants_rug",
+    "name": "FakeMerchantsRug",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fake_orichalcum",
+    "name": "FakeOrichalcum",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fake_snecko_eye",
+    "name": "FakeSneckoEye",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fake_strike_dummy",
+    "name": "FakeStrikeDummy",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "fake_venerable_tea_set",
+    "name": "FakeVenerableTeaSet",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "fencing_manual",
+    "name": "FencingManual",
+    "rarity": "Common",
+    "description": "At start of turn"
+  },
+  {
+    "id": "festive_popper",
+    "name": "FestivePopper",
+    "rarity": "Common",
+    "description": "Deal 9 damage"
+  },
+  {
+    "id": "fiddle",
+    "name": "Fiddle",
+    "rarity": "Ancient",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "forgotten_soul",
+    "name": "ForgottenSoul",
+    "rarity": "Event",
+    "description": "Deal 1 damage"
+  },
+  {
+    "id": "fragrant_mushroom",
+    "name": "FragrantMushroom",
+    "rarity": "Event",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "fresnel_lens",
+    "name": "FresnelLens",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "frozen_egg",
+    "name": "FrozenEgg",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "funerary_mask",
+    "name": "FuneraryMask",
+    "rarity": "Uncommon",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "fur_coat",
+    "name": "FurCoat",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "galactic_dust",
+    "name": "GalacticDust",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "gambling_chip",
+    "name": "GamblingChip",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "game_piece",
+    "name": "GamePiece",
+    "rarity": "Rare",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "ghost_seed",
+    "name": "GhostSeed",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "girya",
+    "name": "Girya",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "glass_eye",
+    "name": "GlassEye",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "glitter",
+    "name": "Glitter",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "gnarled_hammer",
+    "name": "GnarledHammer",
+    "rarity": "Shop",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "gold_plated_cables",
+    "name": "GoldPlatedCables",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "golden_compass",
+    "name": "GoldenCompass",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "golden_pearl",
+    "name": "GoldenPearl",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "gorget",
+    "name": "Gorget",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "gremlin_horn",
+    "name": "GremlinHorn",
+    "rarity": "Uncommon",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "hand_drill",
+    "name": "HandDrill",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "happy_flower",
+    "name": "HappyFlower",
+    "rarity": "Common",
+    "description": "At start of turn"
+  },
+  {
+    "id": "helical_dart",
+    "name": "HelicalDart",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "history_course",
+    "name": "HistoryCourse",
+    "rarity": "Event",
+    "description": "At start of turn"
+  },
+  {
+    "id": "horn_cleat",
+    "name": "HornCleat",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "ice_cream",
+    "name": "IceCream",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "infused_core",
+    "name": "InfusedCore",
+    "rarity": "Starter",
+    "description": "At start of turn"
+  },
+  {
+    "id": "intimidating_helmet",
+    "name": "IntimidatingHelmet",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "iron_club",
+    "name": "IronClub",
+    "rarity": "Ancient",
+    "description": "Add 4 cards"
+  },
+  {
+    "id": "ivory_tile",
+    "name": "IvoryTile",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "jeweled_mask",
+    "name": "JeweledMask",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "jewelry_box",
+    "name": "JewelryBox",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "joss_paper",
+    "name": "JossPaper",
+    "rarity": "Uncommon",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "juzu_bracelet",
+    "name": "JuzuBracelet",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "kifuda",
+    "name": "Kifuda",
+    "rarity": "Shop",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "kunai",
+    "name": "Kunai",
+    "rarity": "Rare",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "kusarigama",
+    "name": "Kusarigama",
+    "rarity": "Uncommon",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "lantern",
+    "name": "Lantern",
+    "rarity": "Common",
+    "description": "At start of turn"
+  },
+  {
+    "id": "large_capsule",
+    "name": "LargeCapsule",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "lasting_candy",
+    "name": "LastingCandy",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "lava_lamp",
+    "name": "LavaLamp",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "lava_rock",
+    "name": "LavaRock",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "lead_paperweight",
+    "name": "LeadPaperweight",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "leafy_poultice",
+    "name": "LeafyPoultice",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "lees_waffle",
+    "name": "LeesWaffle",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "letter_opener",
+    "name": "LetterOpener",
+    "rarity": "Uncommon",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "lizard_tail",
+    "name": "LizardTail",
+    "rarity": "Rare",
+    "description": "Heal 50 HP"
+  },
+  {
+    "id": "looming_fruit",
+    "name": "LoomingFruit",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "lords_parasol",
+    "name": "LordsParasol",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "lost_coffer",
+    "name": "LostCoffer",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "lost_wisp",
+    "name": "LostWisp",
+    "rarity": "Event",
+    "description": "Deal 8 damage"
+  },
+  {
+    "id": "lucky_fysh",
+    "name": "LuckyFysh",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "lunar_pastry",
+    "name": "LunarPastry",
+    "rarity": "Rare",
+    "description": "At end of turn"
+  },
+  {
+    "id": "mango",
+    "name": "Mango",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "massive_scroll",
+    "name": "MassiveScroll",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "maw_bank",
+    "name": "MawBank",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "meal_ticket",
+    "name": "MealTicket",
+    "rarity": "Common",
+    "description": "Heal 15 HP"
+  },
+  {
+    "id": "meat_cleaver",
+    "name": "MeatCleaver",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "meat_on_the_bone",
+    "name": "MeatOnTheBone",
+    "rarity": "Rare",
+    "description": "Heal 12 HP"
+  },
+  {
+    "id": "membership_card",
+    "name": "MembershipCard",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "mercury_hourglass",
+    "name": "MercuryHourglass",
+    "rarity": "Uncommon",
+    "description": "Deal 3 damage"
+  },
+  {
+    "id": "metronome",
+    "name": "Metronome",
+    "rarity": "Rare",
+    "description": "Deal 30 damage"
+  },
+  {
+    "id": "mini_regent",
+    "name": "MiniRegent",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "miniature_cannon",
+    "name": "MiniatureCannon",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "miniature_tent",
+    "name": "MiniatureTent",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "molten_egg",
+    "name": "MoltenEgg",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "mr_struggles",
+    "name": "MrStruggles",
+    "rarity": "Event",
+    "description": "At start of turn"
+  },
+  {
+    "id": "mummified_hand",
+    "name": "MummifiedHand",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "music_box",
+    "name": "MusicBox",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "mystic_lighter",
+    "name": "MysticLighter",
+    "rarity": "Shop",
+    "description": "Deal 9 damage"
+  },
+  {
+    "id": "neows_torment",
+    "name": "NeowsTorment",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "new_leaf",
+    "name": "NewLeaf",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "ninja_scroll",
+    "name": "NinjaScroll",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "nunchaku",
+    "name": "Nunchaku",
+    "rarity": "Uncommon",
+    "description": "Add 10 cards"
+  },
+  {
+    "id": "nutritious_oyster",
+    "name": "NutritiousOyster",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "nutritious_soup",
+    "name": "NutritiousSoup",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "oddly_smooth_stone",
+    "name": "OddlySmoothStone",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "old_coin",
+    "name": "OldCoin",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "orange_dough",
+    "name": "OrangeDough",
+    "rarity": "Rare",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "orichalcum",
+    "name": "Orichalcum",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "ornamental_fan",
+    "name": "OrnamentalFan",
+    "rarity": "Uncommon",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "orrery",
+    "name": "Orrery",
+    "rarity": "Shop",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "paels_blood",
+    "name": "PaelsBlood",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "paels_claw",
+    "name": "PaelsClaw",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "paels_eye",
+    "name": "PaelsEye",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "paels_flesh",
+    "name": "PaelsFlesh",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "paels_growth",
+    "name": "PaelsGrowth",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "paels_horn",
+    "name": "PaelsHorn",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "paels_legion",
+    "name": "PaelsLegion",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "paels_tears",
+    "name": "PaelsTears",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "paels_tooth",
+    "name": "PaelsTooth",
+    "rarity": "Ancient",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "paels_wing",
+    "name": "PaelsWing",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "pandoras_box",
+    "name": "PandorasBox",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "pantograph",
+    "name": "Pantograph",
+    "rarity": "Uncommon",
+    "description": "Heal 25 HP"
+  },
+  {
+    "id": "paper_krane",
+    "name": "PaperKrane",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "paper_phrog",
+    "name": "PaperPhrog",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "parrying_shield",
+    "name": "ParryingShield",
+    "rarity": "Uncommon",
+    "description": "Deal 6 damage"
+  },
+  {
+    "id": "pear",
+    "name": "Pear",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "pen_nib",
+    "name": "PenNib",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "pendulum",
+    "name": "Pendulum",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "permafrost",
+    "name": "Permafrost",
+    "rarity": "Common",
+    "description": "When playing cards"
+  },
+  {
+    "id": "petrified_toad",
+    "name": "PetrifiedToad",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "philosophers_stone",
+    "name": "PhilosophersStone",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "phylactery_unbound",
+    "name": "PhylacteryUnbound",
+    "rarity": "Starter",
+    "description": "At start of turn"
+  },
+  {
+    "id": "planisphere",
+    "name": "Planisphere",
+    "rarity": "Uncommon",
+    "description": "Heal 4 HP"
+  },
+  {
+    "id": "pocketwatch",
+    "name": "Pocketwatch",
+    "rarity": "Rare",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "pollinous_core",
+    "name": "PollinousCore",
+    "rarity": "Event",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "pomander",
+    "name": "Pomander",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "potion_belt",
+    "name": "PotionBelt",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "power_cell",
+    "name": "PowerCell",
+    "rarity": "Rare",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "prayer_wheel",
+    "name": "PrayerWheel",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "precarious_shears",
+    "name": "PrecariousShears",
+    "rarity": "Ancient",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "precise_scissors",
+    "name": "PreciseScissors",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "preserved_fog",
+    "name": "PreservedFog",
+    "rarity": "Ancient",
+    "description": "Add 5 cards"
+  },
+  {
+    "id": "prismatic_gem",
+    "name": "PrismaticGem",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "pumpkin_candle",
+    "name": "PumpkinCandle",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "punch_dagger",
+    "name": "PunchDagger",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "radiant_pearl",
+    "name": "RadiantPearl",
+    "rarity": "Ancient",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "rainbow_ring",
+    "name": "RainbowRing",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "razor_tooth",
+    "name": "RazorTooth",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "red_mask",
+    "name": "RedMask",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "red_skull",
+    "name": "RedSkull",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "regal_pillow",
+    "name": "RegalPillow",
+    "rarity": "Common",
+    "description": "Heal 15 HP"
+  },
+  {
+    "id": "regalite",
+    "name": "Regalite",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "reptile_trinket",
+    "name": "ReptileTrinket",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "ring_of_the_drake",
+    "name": "RingOfTheDrake",
+    "rarity": "Starter",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "ring_of_the_snake",
+    "name": "RingOfTheSnake",
+    "rarity": "Starter",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "ringing_triangle",
+    "name": "RingingTriangle",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "ripple_basin",
+    "name": "RippleBasin",
+    "rarity": "Uncommon",
+    "description": "At start of turn"
+  },
+  {
+    "id": "royal_poison",
+    "name": "RoyalPoison",
+    "rarity": "Event",
+    "description": "Deal 4 damage"
+  },
+  {
+    "id": "royal_stamp",
+    "name": "RoyalStamp",
+    "rarity": "Shop",
+    "description": "Add 1 cards"
+  },
+  {
+    "id": "ruined_helmet",
+    "name": "RuinedHelmet",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "runic_capacitor",
+    "name": "RunicCapacitor",
+    "rarity": "Shop",
+    "description": "At start of turn"
+  },
+  {
+    "id": "runic_pyramid",
+    "name": "RunicPyramid",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "sai",
+    "name": "Sai",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "sand_castle",
+    "name": "SandCastle",
+    "rarity": "Ancient",
+    "description": "Add 6 cards"
+  },
+  {
+    "id": "screaming_flagon",
+    "name": "ScreamingFlagon",
+    "rarity": "Shop",
+    "description": "Deal 20 damage"
+  },
+  {
+    "id": "scroll_boxes",
+    "name": "ScrollBoxes",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "sea_glass",
+    "name": "SeaGlass",
+    "rarity": "Ancient",
+    "description": "Add 15 cards"
+  },
+  {
+    "id": "seal_of_gold",
+    "name": "SealOfGold",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "self_forming_clay",
+    "name": "SelfFormingClay",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "sere_talon",
+    "name": "SereTalon",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "shovel",
+    "name": "Shovel",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "shuriken",
+    "name": "Shuriken",
+    "rarity": "Rare",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "signet_ring",
+    "name": "SignetRing",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "silver_crucible",
+    "name": "SilverCrucible",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "sling_of_courage",
+    "name": "SlingOfCourage",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "small_capsule",
+    "name": "SmallCapsule",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "snecko_eye",
+    "name": "SneckoEye",
+    "rarity": "Ancient",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "snecko_skull",
+    "name": "SneckoSkull",
+    "rarity": "Common",
+    "description": "When playing cards"
+  },
+  {
+    "id": "sozu",
+    "name": "Sozu",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "sparkling_rouge",
+    "name": "SparklingRouge",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "spiked_gauntlets",
+    "name": "SpikedGauntlets",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "stone_calendar",
+    "name": "StoneCalendar",
+    "rarity": "Rare",
+    "description": "Deal 52 damage"
+  },
+  {
+    "id": "stone_cracker",
+    "name": "StoneCracker",
+    "rarity": "Uncommon",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "stone_humidifier",
+    "name": "StoneHumidifier",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "storybook",
+    "name": "Storybook",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "strike_dummy",
+    "name": "StrikeDummy",
+    "rarity": "Common",
+    "description": "When playing cards"
+  },
+  {
+    "id": "sturdy_clamp",
+    "name": "SturdyClamp",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "sword_of_jade",
+    "name": "SwordOfJade",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "sword_of_stone",
+    "name": "SwordOfStone",
+    "rarity": "Event",
+    "description": "At end of combat"
+  },
+  {
+    "id": "symbiotic_virus",
+    "name": "SymbioticVirus",
+    "rarity": "Uncommon",
+    "description": "At start of turn"
+  },
+  {
+    "id": "tanxs_whistle",
+    "name": "TanxsWhistle",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "tea_of_discourtesy",
+    "name": "TeaOfDiscourtesy",
+    "rarity": "Event",
+    "description": "Heal 1 HP"
+  },
+  {
+    "id": "the_abacus",
+    "name": "TheAbacus",
+    "rarity": "Shop",
+    "description": null
+  },
+  {
+    "id": "the_boot",
+    "name": "TheBoot",
+    "rarity": "Event",
+    "description": "When playing cards"
+  },
+  {
+    "id": "the_courier",
+    "name": "TheCourier",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "throwing_axe",
+    "name": "ThrowingAxe",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "tingsha",
+    "name": "Tingsha",
+    "rarity": "Uncommon",
+    "description": "Deal 3 damage"
+  },
+  {
+    "id": "tiny_mailbox",
+    "name": "TinyMailbox",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "toasty_mittens",
+    "name": "ToastyMittens",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "toolbox",
+    "name": "Toolbox",
+    "rarity": "Shop",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "touch_of_orobas",
+    "name": "TouchOfOrobas",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "tough_bandages",
+    "name": "ToughBandages",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "toxic_egg",
+    "name": "ToxicEgg",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "toy_box",
+    "name": "ToyBox",
+    "rarity": "Ancient",
+    "description": null
+  },
+  {
+    "id": "tri_boomerang",
+    "name": "TriBoomerang",
+    "rarity": "Ancient",
+    "description": "Add 3 cards"
+  },
+  {
+    "id": "tungsten_rod",
+    "name": "TungstenRod",
+    "rarity": "Rare",
+    "description": "When playing cards"
+  },
+  {
+    "id": "tuning_fork",
+    "name": "TuningFork",
+    "rarity": "Uncommon",
+    "description": "Add 10 cards"
+  },
+  {
+    "id": "twisted_funnel",
+    "name": "TwistedFunnel",
+    "rarity": "Uncommon",
+    "description": null
+  },
+  {
+    "id": "unceasing_top",
+    "name": "UnceasingTop",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "undying_sigil",
+    "name": "UndyingSigil",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "unsettling_lamp",
+    "name": "UnsettlingLamp",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "vajra",
+    "name": "Vajra",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "vakuu_card_selector",
+    "name": "VakuuCardSelector",
+    "rarity": null,
+    "description": "When playing cards"
+  },
+  {
+    "id": "vambrace",
+    "name": "Vambrace",
+    "rarity": "Uncommon",
+    "description": "When playing cards"
+  },
+  {
+    "id": "velvet_choker",
+    "name": "VelvetChoker",
+    "rarity": "Ancient",
+    "description": "Add 6 cards"
+  },
+  {
+    "id": "venerable_tea_set",
+    "name": "VenerableTeaSet",
+    "rarity": "Common",
+    "description": null
+  },
+  {
+    "id": "very_hot_cocoa",
+    "name": "VeryHotCocoa",
+    "rarity": "Ancient",
+    "description": "At start of turn"
+  },
+  {
+    "id": "vexing_puzzlebox",
+    "name": "VexingPuzzlebox",
+    "rarity": "Rare",
+    "description": "At start of turn"
+  },
+  {
+    "id": "vitruvian_minion",
+    "name": "VitruvianMinion",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "war_hammer",
+    "name": "WarHammer",
+    "rarity": "Ancient",
+    "description": "Add 4 cards"
+  },
+  {
+    "id": "war_paint",
+    "name": "WarPaint",
+    "rarity": "Common",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "whetstone",
+    "name": "Whetstone",
+    "rarity": "Common",
+    "description": "Add 2 cards"
+  },
+  {
+    "id": "whispering_earring",
+    "name": "WhisperingEarring",
+    "rarity": "Ancient",
+    "description": "When playing cards"
+  },
+  {
+    "id": "white_beast_statue",
+    "name": "WhiteBeastStatue",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "white_star",
+    "name": "WhiteStar",
+    "rarity": "Rare",
+    "description": null
+  },
+  {
+    "id": "wing_charm",
+    "name": "WingCharm",
+    "rarity": "Shop",
+    "description": "When playing cards"
+  },
+  {
+    "id": "wongo_customer_appreciation_badge",
+    "name": "WongoCustomerAppreciationBadge",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "wongos_mystery_ticket",
+    "name": "WongosMysteryTicket",
+    "rarity": "Event",
+    "description": null
+  },
+  {
+    "id": "yummy_cookie",
+    "name": "YummyCookie",
+    "rarity": "Ancient",
+    "description": "Add 4 cards"
+  }
+]

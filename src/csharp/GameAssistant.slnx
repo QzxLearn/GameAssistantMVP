@@ -12,4 +12,10 @@
   <Folder Name="/Presentation/WpfClient/">
     <Project Path="Presentation/WpfClient/GameAssistant.WpfClient.csproj" />
   </Folder>
+  <Folder Name="/test/">
+    <Project Path="OnnxTest/OnnxTest.csproj" Id="9e0f0a90-7c2e-48f3-8acf-3198bc5b78fb" />
+  </Folder>
+  <Folder Name="/Background/">
+    <Project Path="Background/GameAssistant.Worker.csproj" />
+  </Folder>
 </Solution>

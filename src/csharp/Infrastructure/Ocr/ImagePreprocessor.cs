@@ -1,12 +1,13 @@
-﻿using OpenCvSharp;
+using OpenCvSharp;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GameAssistant.Infrastructure.Ocr
 {
     public class ImagePreprocessor
     {
+        /// <summary>
+        /// 标准预处理：灰度 → Otsu二值化 → 2x放大
+        /// </summary>
         public static Mat Preprocess(Mat input)
         {
             if (input.Empty())
@@ -20,13 +21,18 @@ namespace GameAssistant.Infrastructure.Ocr
             using var binary = new Mat();
             Cv2.Threshold(gray, binary, 0, 255, ThresholdTypes.Otsu | ThresholdTypes.BinaryInv);
 
-            // 3. 放大图像（Tesseract 对小字体识别差，2x 是经验值）
-            var scaled = new Mat();
+            // 3. 放大 2x（Tesseract 对小字体识别差，2x 是经验值）
+            // FIX: wrapped in `using` to prevent memory leak
+            using var scaled = new Mat();
             Cv2.Resize(binary, scaled, new OpenCvSharp.Size(), 2.0, 2.0, InterpolationFlags.Lanczos4);
 
-            return scaled; // caller responsible for disposal
+            // Return a clone so caller has independent ownership
+            return scaled.Clone();
         }
 
+        /// <summary>
+        /// 卡牌文字专用预处理：高斯去噪 → 自适应阈值 → 形态学闭运算 → 3x放大
+        /// </summary>
         public static Mat PreprocessForCardText(Mat input)
         {
             // 1. 转灰度
@@ -50,14 +56,16 @@ namespace GameAssistant.Infrastructure.Ocr
             Cv2.MorphologyEx(binary, morphed, MorphTypes.Close, kernel);
 
             // 5. 放大 3x（小字体识别关键）
-            var scaled = new Mat();
+            // FIX: wrapped in `using` to prevent memory leak
+            using var scaled = new Mat();
             Cv2.Resize(morphed, scaled, new Size(), 3.0, 3.0, InterpolationFlags.Cubic);
 
-            return scaled;
+            return scaled.Clone();
         }
 
         /// <summary>
         /// 从全屏截图中精准裁剪卡牌文字区域（假设卡牌在底部 20%）
+        /// NOTE: caller must NOT dispose the returned Mat — it shares data with fullScreen.
         /// </summary>
         public static Mat CropCardTextRegion(Mat fullScreen)
         {
@@ -65,6 +73,5 @@ namespace GameAssistant.Infrastructure.Ocr
             int y = fullScreen.Height - textHeight;
             return new Mat(fullScreen, new Rect(0, y, fullScreen.Width, textHeight));
         }
-
     }
 }

@@ -1,5 +1,8 @@
 // GameAssistant.WpfClient/Helpers/TrayIconHelper.cs
+using GameAssistant.Infrastructure.Storage.Data;
+using GameAssistant.WpfClient.Views;
 using Hardcodet.Wpf.TaskbarNotification;
+using Microsoft.Extensions.DependencyInjection;
 using NHotkey;
 using NHotkey.Wpf;
 using System;
@@ -15,12 +18,14 @@ public class TrayIconHelper : IDisposable
     private readonly TaskbarIcon _trayIcon;
     private readonly Window _mainWindow;
     private readonly Action _onCaptureRequested;
+    private readonly IServiceProvider _serviceProvider;
     private bool _disposed;
 
-    public TrayIconHelper(Window mainWindow, Action onCaptureRequested)
+    public TrayIconHelper(Window mainWindow, Action onCaptureRequested, IServiceProvider serviceProvider)
     {
         _mainWindow = mainWindow;
         _onCaptureRequested = onCaptureRequested;
+        _serviceProvider = serviceProvider;
 
         // 1. 创建托盘图标（纯代码，无 XAML 依赖）
         _trayIcon = new TaskbarIcon
@@ -61,6 +66,10 @@ public class TrayIconHelper : IDisposable
             {
                 new MenuItem { Header = "Show Window", Command = new RelayCommand(ShowMainWindow) },
                 new MenuItem { Header = "Capture Region (Ctrl+Alt+G)", Command = new RelayCommand(TriggerCapture) },
+                new MenuItem {
+                    Header = "Training Data Capture",
+                    Command = new RelayCommand(OpenTrainingWindow)
+                },
                 new Separator(),
                 new MenuItem { Header = "Exit", Command = new RelayCommand(ExitApplication) }
             }
@@ -91,6 +100,14 @@ public class TrayIconHelper : IDisposable
     {
         Dispose();
         Application.Current.Shutdown();
+    }
+
+    private void OpenTrainingWindow()
+    {
+        var dbContext = _serviceProvider.GetRequiredService<AppDbContext>();
+        var trainingWin = new TrainingDataCaptureWindow(dbContext);
+        trainingWin.Show();
+        trainingWin.Activate();
     }
 
     public void Dispose()

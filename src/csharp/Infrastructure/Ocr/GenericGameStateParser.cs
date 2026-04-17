@@ -16,4 +16,14 @@ public class GenericGameStateParser : IGameStateParser
             RawOcrText = ocrText.Trim()
         };
     }
+
+    public T Parse<T>(string ocrText) where T : GameState
+    {
+        var state = Parse(ocrText);
+        if (state is T typed)
+            return typed;
+
+        // 尝试从 RawOcrText 重建
+        return Activator.CreateInstance<T>();
+    }
 }

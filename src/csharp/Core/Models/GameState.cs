@@ -1,32 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json.Serialization;
 
-namespace GameAssistant.Core.Models
+namespace GameAssistant.Core.Models;
+
+/// <summary>
+/// æ‰€æœ‰æ¸¸æˆçŠ¶æ€çš„æŠ½è±¡åŸºç±»
+/// </summary>
+public abstract class GameState
 {
+    [JsonInclude]
+    public string GameName { get; init; } = string.Empty;
+
+    [JsonInclude]
+    public DateTime Timestamp { get; init; } = DateTime.UtcNow;
+
     /// <summary>
-    /// ËùÓĞÓÎÏ·×´Ì¬µÄ»ùÀà
+   /// åŸå§‹ OCR æ–‡æœ¬ï¼Œç”¨äºè°ƒè¯•/å›æ”¾
     /// </summary>
-    public abstract class GameState
-    {
-        [JsonInclude]
-        public string GameName { get; init; } = string.Empty;
-
-        [JsonInclude]
-        public DateTime Timestamp { get; init; } = DateTime.UtcNow;
-
-        /// <summary>
-        /// ¿ÉÑ¡£ºÔ­Ê¼ OCR ÎÄ±¾£¨ÓÃÓÚµ÷ÊÔ/»Ø·Å£©
-        /// </summary>
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public string? RawOcrText { get; set; }
-    }
-
-    // Ê¾Àı£º¾ßÌåÓÎÏ·×´Ì¬£¨ÓÉ¸÷ Adapter ÊµÏÖ£©
-    public class GenericGameState : GameState
-    {
-        public string RecognizedText { get; set; } = string.Empty;
-    }
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string? RawOcrText { get; set; }
 }
 
+/// <summary>
+/// é€šç”¨æ¸¸æˆçŠ¶æ€ï¼ˆæ— ç‰¹å®šæ¸¸æˆç»“æ„æ—¶ä½¿ç”¨ï¼‰
+/// </summary>
+public class GenericGameState : GameState
+{
+    public string RecognizedText { get; set; } = string.Empty;
+}

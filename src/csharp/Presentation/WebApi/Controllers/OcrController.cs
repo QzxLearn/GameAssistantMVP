@@ -8,9 +8,8 @@ namespace GameAssistant.Presentation.WebApi.Controllers
     [Route("api/[controller]")]
     public class OcrController : ControllerBase
     {
-        private readonly IOcrService _ocrService; // �?接口类型
+        private readonly IOcrService _ocrService;
 
-        // 依赖注入（由 Program.cs 注册�?
         public OcrController(IOcrService ocrService)
         {
             _ocrService = ocrService;
@@ -25,7 +24,7 @@ namespace GameAssistant.Presentation.WebApi.Controllers
             try
             {
                 byte[] imageBytes = Convert.FromBase64String(request.Base64Image);
-                string text = _ocrService.RecognizeFromBytes(imageBytes); // �?调用统一服务
+                string text = _ocrService.RecognizeFromBytes(imageBytes);
                 return Ok(new { text });
             }
             catch (Exception ex)

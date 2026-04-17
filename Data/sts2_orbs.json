@@ -1,0 +1,52 @@
+[
+  {
+    "id": "lightning_orb",
+    "name": "LightningOrb",
+    "passiveVal": 3,
+    "evokeVal": 8,
+    "passiveEffect": "Deal 3 damage to a random enemy at end of turn.",
+    "evokeEffect": "Deal 8 damage to a random enemy.",
+    "passiveTrigger": "EndOfTurn",
+    "evokeTrigger": "Manual"
+  },
+  {
+    "id": "frost_orb",
+    "name": "FrostOrb",
+    "passiveVal": 2,
+    "evokeVal": 5,
+    "passiveEffect": "Gain 2 Block at end of turn.",
+    "evokeEffect": "Gain 5 Block.",
+    "passiveTrigger": "EndOfTurn",
+    "evokeTrigger": "Manual"
+  },
+  {
+    "id": "plasma_orb",
+    "name": "PlasmaOrb",
+    "passiveVal": 1,
+    "evokeVal": 2,
+    "passiveEffect": "Gain 1 Energy at start of turn.",
+    "evokeEffect": "Gain 2 Energy.",
+    "passiveTrigger": "StartOfTurn",
+    "evokeTrigger": "Manual"
+  },
+  {
+    "id": "dark_orb",
+    "name": "DarkOrb",
+    "passiveVal": 6,
+    "evokeVal": 6,
+    "passiveEffect": "Passive: Each turn, increase Evoke value by 6. Evoke: Deal damage equal to current Evoke value to the weakest enemy.",
+    "evokeEffect": "Deal accumulated damage to weakest enemy.",
+    "passiveTrigger": "EndOfTurn",
+    "evokeTrigger": "Manual"
+  },
+  {
+    "id": "glass_orb",
+    "name": "GlassOrb",
+    "passiveVal": 4,
+    "evokeVal": 8,
+    "passiveEffect": "Deal 4 damage to ALL enemies. Passive value decreases by 1 each turn.",
+    "evokeEffect": "Deal 8 damage to ALL enemies.",
+    "passiveTrigger": "EndOfTurn",
+    "evokeTrigger": "Manual"
+  }
+]

@@ -1,0 +1,113 @@
+[
+  {
+    "id": "ironclad",
+    "title": "characters/ironclad.title",
+    "startingHealth": 80,
+    "maxHealth": 80,
+    "startingEnergy": 3,
+    "startingGold": 99,
+    "startingDeck": [
+      "strike_ironclad",
+      "strike_ironclad",
+      "strike_ironclad",
+      "strike_ironclad",
+      "defend_ironclad",
+      "defend_ironclad",
+      "defend_ironclad",
+      "defend_ironclad",
+      "bash"
+    ],
+    "startingRelic": "burning_blood",
+    "startingPotions": []
+  },
+  {
+    "id": "silent",
+    "title": "characters/silent.title",
+    "startingHealth": 70,
+    "maxHealth": 70,
+    "startingEnergy": 3,
+    "startingGold": 99,
+    "startingDeck": [
+      "strike_silent",
+      "strike_silent",
+      "strike_silent",
+      "strike_silent",
+      "strike_silent",
+      "defend_silent",
+      "defend_silent",
+      "defend_silent",
+      "defend_silent",
+      "defend_silent",
+      "neutralize",
+      "survivor"
+    ],
+    "startingRelic": "ring_of_the_snake",
+    "startingPotions": []
+  },
+  {
+    "id": "defect",
+    "title": "characters/defect.title",
+    "startingHealth": 75,
+    "maxHealth": 75,
+    "startingEnergy": 3,
+    "startingGold": 99,
+    "startingDeck": [
+      "strike_defect",
+      "strike_defect",
+      "strike_defect",
+      "strike_defect",
+      "defend_defect",
+      "defend_defect",
+      "defend_defect",
+      "defend_defect",
+      "zap",
+      "dualcast"
+    ],
+    "startingRelic": "cracked_core",
+    "startingPotions": []
+  },
+  {
+    "id": "necrobinder",
+    "title": "characters/necrobinder.title",
+    "startingHealth": 66,
+    "maxHealth": 66,
+    "startingEnergy": 3,
+    "startingGold": 99,
+    "startingDeck": [
+      "strike_necrobinder",
+      "strike_necrobinder",
+      "strike_necrobinder",
+      "strike_necrobinder",
+      "defend_necrobinder",
+      "defend_necrobinder",
+      "defend_necrobinder",
+      "defend_necrobinder",
+      "bodyguard",
+      "unleash"
+    ],
+    "startingRelic": "bound_phylactery",
+    "startingPotions": []
+  },
+  {
+    "id": "regent",
+    "title": "characters/regent.title",
+    "startingHealth": 75,
+    "maxHealth": 75,
+    "startingEnergy": 3,
+    "startingGold": 99,
+    "startingDeck": [
+      "strike_regent",
+      "strike_regent",
+      "strike_regent",
+      "strike_regent",
+      "defend_regent",
+      "defend_regent",
+      "defend_regent",
+      "defend_regent",
+      "falling_star",
+      "venerate"
+    ],
+    "startingRelic": "divine_right",
+    "startingPotions": []
+  }
+]
